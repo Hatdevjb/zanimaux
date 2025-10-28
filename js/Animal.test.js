@@ -3,7 +3,7 @@
 import { Animal } from "./Animal.class.js";
 
 // Scénario Nominal
-let plouc = new Animal("Plouc", "Chat", true);
+let plouc = new Animal("Plouc", "chat", true);
 plouc.afficher();
 
 let balou = new Animal("Balou", "chien");
