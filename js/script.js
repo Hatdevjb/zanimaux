@@ -1,3 +1,3 @@
 "use strict"
 
-console.log("Hello Wolrd !")
+import { Animal } from "./Animal.class.js";
