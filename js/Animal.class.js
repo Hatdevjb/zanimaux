@@ -48,7 +48,7 @@ export class Animal {
 
     // Methode
 
-    affichez() {
+    afficher() {
         console.log (this.#espece + " s'appel " + this.#nom + (this.#vol? "vole" : "ne vole pas"))
     }
 }
