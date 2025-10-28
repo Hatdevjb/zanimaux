@@ -6,6 +6,12 @@ export class Animal {
     #espece = "";
     #vol;
     // constructeur
+    /**
+     * crée un animal avec param en privé
+     * @param {string} nom 
+     * @param {string} espece 
+     * @param {boolean} vol 
+     */
     constructor(nom,espece,vol = false) {
         this.#setNom(nom);
         this.#setEspece(espece);
@@ -15,21 +21,21 @@ export class Animal {
     // Setter
 
     #setNom(nom) {
-        if (!nom) throw new Error("Paramètre 'nom' obligatoire");
+        if (!nom) throw new Error("Le paramètre 'nom' est obligatoire");
         if (nom.length < 3) throw new Error("Paramètre 'nom' doit avoir 3 caractères minimum");
 
-        this.setNom = nom;
+        this.#nom = nom;
     }
     
     #setEspece(espece) {
-        if (!espece) throw new Error("Paramètre 'espece' obligatoire");
+        if (!espece) throw new Error("Le paramètre 'espece' est obligatoire");
         if (espece.length < 3) throw new Error("Paramètre 'espece' doit avoir 3 caractères minimum");
 
         this.#espece = espece;
     }
     
     #setVol(vol) {
-        if (typeof(vol) != "boolean") throw new Error("Paramètre 'vol' est un booléen");
+        if (typeof(vol) != "boolean") throw new Error("Le paramètre 'vol' est un booléen");
 
         this.#vol = vol;
     }
@@ -49,6 +55,6 @@ export class Animal {
     // Methode
 
     afficher() {
-        console.log (this.#espece + " s'appel " + this.#nom + (this.#vol? "vole" : "ne vole pas"))
+        console.log ("L'animal est un " + this.#espece + " qui s'appel " + this.#nom + (this.#vol? " et il peut voler" : " et il ne peut pas voler"))
     }
 }
