@@ -7,7 +7,28 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <h1>Créez Votre Animal Aléatoire</h1>
+        <h1>Créer un animal aléatoire</h1>
+
+        <form>
+            <label for="idNom">Nom :</label>
+            <input type="text" name="nom" id="idNom">
+            <br>
+            <label for="idEsp">Espèce :</label>
+            <input type="text" name="espece" id="idEsp">
+            <br>
+            <label for="idVol">Vole-t-il ?</label>
+            <input type="checkbox" name="vol" id="idVol">
+            <br>
+            <input type="button" value="Créer" id="btnCréer">
+        </form>
+
+        <div id="idErr"></div>
+
+        <h2>Liste des animaux</h2>
+        
+        <div id="idListe"></div>
+
+        <input type="button" value="Vider liste" id="btnvide">
 
         <!-- <script type="module" src="js/script.js"></script> -->
         <script type="module" src="js/Animal.test.js"></script>
