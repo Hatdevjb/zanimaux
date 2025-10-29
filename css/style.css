@@ -77,3 +77,11 @@ input[type="button"]:hover {
     padding: 10px;
 
 }
+
+#idListe:empty {
+    display: none;
+}
+
+#bntVide {
+    margin-top: 10px;
+}
