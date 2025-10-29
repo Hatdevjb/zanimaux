@@ -14,14 +14,14 @@
     // abonner les btn
 
     btnCreer.addEventListener("click", recupChamps);
-    // btnVider.addEventListener("click", viderListe);
+    btnVider.addEventListener("click", viderListe);
 
     function recupChamps() {
         // prend les valeurs du form
         let nom = inputNom.value;
         let espece = inputEspece.value;
         let vol = inputVol.checked;
-        let msg;
+        
 
         try {
             // et creer un animal avec les valeur
@@ -29,10 +29,22 @@
             let animal = new Animal (nom,espece,vol);
        
             //afficher en ajoutant le afficher() dans la liste
-            divListe.innerHTML += animal.afficher() + "\n+<br>\n";
+            divListe.innerHTML += animal.afficher() + "\n<br>\n";
+
+            // local storage
+                // preparation
+            let olAnimal = `{"nom":"`+ nom +`","espece":"`+ espece +`","vol":"`+ vol +`}`
+            console.log(olAnimal);
+
+            
 
         } catch(err) {
             divErr.innerText = err.message;
         }
-    
+
+        
+    }
+    // Vider liste
+    function viderListe() {
+        divListe.innerHTML = "";
     }

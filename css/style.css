@@ -56,3 +56,19 @@ input[type="button"] {
 input[type="button"]:hover {
     transform: scale(1.1);
 }
+
+#idErr {
+    color: aliceblue;
+    background-color: red;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+#idListe {
+    color: aliceblue;
+    background-color: green;
+    border-radius: 15px;
+    padding: 10px;
+
+}
