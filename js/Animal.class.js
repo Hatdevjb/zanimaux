@@ -55,6 +55,6 @@ export class Animal {
     // Methode
 
     afficher() {
-        console.log ("L'animal est un " + this.#espece + " qui s'appel " + this.#nom + (this.#vol? " et il(elle) peut voler" : " et il ne peut pas voler"))
+        return ( ` L'animal est un  ${this.#espece}  qui s'appel  ${this.#nom}  ${this.#vol? " et il(elle) peut voler" : " et il(elle) ne peut pas voler"}`);
     }
 }
