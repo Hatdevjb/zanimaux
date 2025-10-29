@@ -30,6 +30,7 @@ form {
     background-color: lightgreen;
     border-style: dashed;
     border-radius: 15px;
+    margin-bottom: 5px;
     padding: 20px;
     transition: background-color 0.3s, transform 0.3s;
     white-space: nowrap;
@@ -64,6 +65,10 @@ input[type="button"]:hover {
     padding: 10px;
 
 }
+#idErr:empty {
+    display: none;
+} 
+
 
 #idListe {
     color: aliceblue;
